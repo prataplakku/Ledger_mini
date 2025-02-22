@@ -1,0 +1,14 @@
+.content-header{
+    color: rgb(81, 75, 75);
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    align-items: start;
+}
+.content-header select{
+    border-radius: 20px;
+    padding: 5px;
+}
+.option{
+    border-radius: 10px;
+}

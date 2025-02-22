@@ -1,0 +1,28 @@
+.chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.chart-wrapper {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.piechart {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.chart-details {
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
