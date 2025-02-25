@@ -1,28 +1,66 @@
 .chart {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+    align-items:center;
+    justify-content: left;
 }
 
 .chart-wrapper {
     position: relative;
-    width: 250px;
-    height: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: start;
+    width: 100px;
+    height: 100px;
 }
 
 .piechart {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
 }
 
 .chart-details {
     position: absolute;
     text-align: center;
+    align-items: center;
+    top:50%;
+    left: 50%;
+    translate: -50% -50%;
     font-weight: bold;
     font-size: 18px;
+}
+
+.stats{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 10px;
+}
+
+.color-box {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+}
+.indiv-status{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.status, .numbers, .percentages{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+
+.percentages{
+    color: rgb(96, 104, 104);
+}
+
+.chart-details span{
+    font-size: .5rem;
+    color: gray;
 }

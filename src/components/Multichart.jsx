@@ -3,21 +3,26 @@ import { PieChart, Pie, Cell } from "recharts";
 import '../styles/multichart.css';
 
 const Multichart = ({ name, data, COLORS }) => {
-    const total = data.reduce((sum, item) => sum + item.value, 0);
+    const Completed = data[0]['value']
+    const Pending = data[1]['value']
+    const Late = data[2]['value']
+    const total = Completed + Pending + Late
+
+    const completedPercentage = ((Completed / total) * 100).toFixed(2);
+    const pendingPercentage = ((Pending / total) * 100).toFixed(2);
+    const latePercentage = ((Late / total) * 100).toFixed(2);
     
 
     return (
-        <div className='chart-container'>
-            {/* Relative container to position elements */}
             <div className="chart">
                 <div className="chart-wrapper">
-                    <PieChart className='piechart' width={250} height={250}>
+                    <PieChart className='piechart' width={90} height={90}>
                         <Pie
                             data={data}
                             cx="50%"
                             cy="50%"
-                            innerRadius={70}
-                            outerRadius={80}
+                            innerRadius={38}
+                            outerRadius={45}
                             fill="#8884d8"
                             paddingAngle={5}
                             dataKey="value"
@@ -30,34 +35,43 @@ const Multichart = ({ name, data, COLORS }) => {
 
                     {/* Overlaying details inside PieChart */}
                     <div className="chart-details">
-                        <h2>{total}</h2>
+                        <p>{total}</p>
                         <span>{name}</span>
                     </div>
                 </div>
                 <div className="stats">
                     <div className="status">
-                        <div>
-                        <div className="color-box" style={{ backgroundColor: stat.color }}></div>
-                        
+                        <div className='indiv-status'>
+                        <div className="color-box" style={{ backgroundColor: COLORS[0] }}></div>
                         <span>Completed</span>
                         </div>
-                        
+
+                        <div className='indiv-status'>
+                        <div className="color-box" style={{ backgroundColor: COLORS[1] }}></div>
                         <span>Pending</span>
+                        </div>
+
+                        <div className='indiv-status'>
+                        <div className="color-box" style={{ backgroundColor: COLORS[2] }}></div>
                         <span>Late</span>
+                        </div>
                     </div>
+
+
                     <div className="numbers">
-                        <p></p>
-                        <p></p>
-                        <p></p>
+                        <span>{Completed}</span>
+                        <span>{Pending}</span>
+                        <span>{Late}</span>
                     </div>
+
                     <div className="percentages">
-                        <p></p>
-                        <p></p>
-                        <p></p>
+                        <span>{completedPercentage}%</span>
+                        <span>{pendingPercentage}%</span>
+                        <span>{latePercentage}%</span>
                     </div>
                 </div>
             </div>
-        </div>
+
     );
 };
 
