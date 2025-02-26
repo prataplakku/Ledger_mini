@@ -1,14 +1,27 @@
 .content-header{
     color: rgb(81, 75, 75);
     display: flex;
-    gap: 10px;
+    gap: 24px;
     margin-top: 10px;
-    align-items: start;
+    align-items: center;
+
+}
+.content-header h2{
+    color: #111928;
+    font-size: 26px;
+    font-family: "SatoshiMedium", sans-serif;
+    font-weight: 500;
+    line-height: 2.25rem;
+    min-width: fit-content;
 }
 .content-header select{
     border-radius: 20px;
     padding: 5px;
+    line-height: 2.25rem;
+    min-width: fit-content;
 }
 .option{
     border-radius: 10px;
+    line-height: 2.25rem;
+    min-width: fit-content;
 }

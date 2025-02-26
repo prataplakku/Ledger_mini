@@ -38,3 +38,5 @@ const SingleChart = ({name, percentage, color}) => {
 }
 
 export default SingleChart
+
+//Not Used

@@ -1,0 +1,89 @@
+.status-container {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border-radius: 9999px;
+    width: fit-content;
+    padding: 4px 10px;
+    font-size: 12px;
+    text-transform: capitalize;
+    line-height: 1rem;
+}
+
+.status-point {
+    height: 6px;
+    width: 6px;
+    border-radius: 9999px;
+    display: block;
+}
+
+.status-present {
+    border: 1px solid #65C366;
+    background-color: rgba(101, 195, 102, 0.1);
+}
+
+.point-present {
+    background-color: #65C366;
+}
+
+.status-half-day {
+    border: 1px solid #ffd8b2;
+    background-color: #ffd8b2;
+}
+
+.status-less-hours {
+    border: 1px solid #fe0;
+    background-color: #fffccf;
+}
+
+.status-leave {
+    border: 1px solid #ff6b6b;
+    background-color: rgba(255, 107, 107, 0.1);
+}
+
+.status-pending {
+    border: 1px solid #ebb07a;
+    background-color: #fff8f2;
+}
+
+.point-pending {
+    background-color: #ebb07a;
+}
+
+.status-active {
+    border: 1px solid #65C366;
+    background-color: rgba(101, 195, 102, 0.1);
+}
+
+.status-completed {
+    border: 1px solid #65C366;
+    font-weight: 500;
+    color: black;
+    background-color: rgba(101, 195, 102, 0.1);
+}
+
+.point-completed {
+    background-color: #65C366;
+}
+
+.status-assigned {
+    border: 1px solid #38bdf8;
+    font-weight: 500;
+    color: black;
+    background-color: #f0f9ff;
+}
+
+.point-assigned {
+    background-color: #38bdf8;
+}
+
+.status-default {
+    border: 1px solid #b3bdcd;
+    font-weight: 500;
+    color: black;
+    background-color: #f8fafc;
+}
+
+.point-default {
+    background-color: #b3bdcd;
+}

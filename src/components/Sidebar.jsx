@@ -12,61 +12,43 @@ import OverviewIcon from "../assets/icons/OverviewIcon";
 import ReconcileIcon from "../assets/icons/ReconcileIcon";
 import ReportIcon from "../assets/icons/ReportIcon";
 import SettingIcon from "../assets/icons/SettingIcon";
-import { MdBalance } from "react-icons/md";
-import { VscSettings } from "react-icons/vsc";
-import { LuCircleHelp } from "react-icons/lu";
-import { TbLayoutSidebarLeftCollapse } from "react-icons/tb";
 import "../styles/sidebar.css";
 import image from "../assets/photo.jpg";
 import MenuItem from "./MenuItem"
+
 
 
 const MenuList = [
   {
     id: 1,
     title: "Overview",
-    url: "#",
     Icon: OverviewIcon,
-    isActive: true,
-    path: "",
   },
   {
     id: 2,
     title: "Checklist",
-    url: "#",
     Icon: ChecklistIcon,
-    isActive: true,
-    path: "",
   },
   {
     id: 3,
     title: "Reconcile",
-    url: "#",
     Icon: ReconcileIcon,
-    isActive: true,
-    path: "",
   },
   {
     id: 4,
     Icon: FluxAnalysisIcon,
     title: "Flux Analysis ",
-    url: "#",
-    isActive: true,
-    path: "",
   },
   {
     id: 5,
     Icon: ReportIcon,
-    title: "Reports",
-    url: "#",
-    path: "",
+    title: "Reports"
   },
   {
     id: 6,
     Icon: AiAssistantIcon,
     title: "AI Assistant",
-    url: "#",
-    path: "",
+
   },
 ];
 

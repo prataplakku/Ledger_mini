@@ -1,39 +1,95 @@
-.dashboard{
+.dashboard {
   display: flex;
-  flex-shrink: 1;
-  gap: 20px;
-  width: 100%;
   height: 100vh;
+  overflow: hidden;
 }
-.content{
-  height: 100%;
+
+
+/* Content should take the remaining space */
+.content {
+  /* flex-grow: 1; */
+  display: flex;
   width: 100%;
-  display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.main-content{
-  display: flex;
-  gap:20px;
+
+/* Content header should take only necessary space */
+.content-header {
+  flex-shrink: 0;
 }
-.center-content{
+
+/* Main content should take up the remaining height and width */
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  overflow: hidden;
+  gap:20px; 
+}
+
+/* Charts-blockers should take all available space on the left */
+.charts-blockers {
+  flex-grow: 1; 
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.blockers{
-  border: 2px solid lightgray;
-  border-radius: 10px;
+
+/* Both charts should take 50% of available height */
+.both-charts {
+  flex: 1;
+  overflow: hidden;
 }
 
-.data-table{
-  border: 2px solid lightgray;
-  border-radius: 10px;
+/* Blockers should take remaining space and be scrollable */
+.overview-blockers {
+  height: calc(100% - 50% - 12px);
+  margin-top: 12px;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.overview-title {
+  font-size: 16px;
+  line-height: 1rem;
+  padding: 20px;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 600;
+}
+
+.overview-table-container {
+  height: 87%;
   overflow-y: scroll;
-  background: rgb(236, 235, 235);
 }
 
-.task-summary{
-  border:2px solid lightgray
+.overview-table-container::-webkit-scrollbar {
+  width: 6px;
 }
+
+.overview-table-container::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+.overview-table-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+/* Task summary should be positioned at the rightmost end */
+.task-summary {
+  width: 25%;
+  flex-shrink: 0;
+  background: #f8f9fa; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* border-left: 1px solid #ddd;  */
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+

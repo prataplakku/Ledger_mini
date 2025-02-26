@@ -1,34 +1,42 @@
 import './App.css'
 import Sidebar from './components/Sidebar'
 import ContentHeader from './components/ContentHeader'
-import Charts from './components/Charts'
-import Blockers from './components/Blockers'
-import TaskSummary from './components/TaskSummary'
-
+import OverviewCloseStatus from './components/OverviewCloseStatus';
+import OverviewTable from './components/OverviewTable';
+import { OverviewTableData } from "./assets/TableData";
 
 function App() {
  
   return (
     <div className='dashboard'> 
+
       <Sidebar/>
+
       <div className="content">
         <ContentHeader/>
         <div className="main-content">
-          <div className="center-content">
-            <Charts />
-
-            <div className="blockers">
-            <Blockers />
+          <div className="charts-blockers">
+            <div className="center-content">
+              <OverviewCloseStatus/>
             </div>
 
+            <div className="overview-blockers">
+              <h2 className="overview-title">Blockers</h2>
+              <div className="overview-table-container">
+                <OverviewTable tableData={OverviewTableData}/>
+               </div>
+            </div>
             
           </div>
-          <TaskSummary/>
+
+          <div className="task-summary">
+            <p>Task Summary</p>
+
+          </div>        
         </div>
       </div>
       
     </div>
-
   )
 }
 

@@ -1,0 +1,39 @@
+.circle-container {
+    position: relative;
+    display: inline-block;
+}
+
+.progress-circle {
+    transform: rotate(-90deg);
+}
+
+.circle-background {
+    stroke: #e5e7eb;
+    fill: none;
+    stroke-linecap: round;
+}
+
+.circle-progress {
+    fill: none;
+    transition: stroke-dashoffset 0.5s ease-in-out;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.circle-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.percentage-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.status-text {
+    font-size: 0.75rem;
+    color: #6b7280;
+}

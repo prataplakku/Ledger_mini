@@ -1,0 +1,52 @@
+.overview-container {
+    padding: 20px;
+    /* height: calc(100% - 50%); */
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .title {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Satoshi", sans-serif;
+  }
+  
+  .grid-container {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 16px;
+  }
+  
+  .section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .border-right {
+    border-right: 1px solid #e5e7eb;
+    padding-right: 16px;
+  }
+  
+  .padding-left {
+    padding-left: 12px;
+  }
+  
+  .progress-section {
+    margin-top: 36px;
+  }
+  
+  .progress-label {
+    font-size: 16px;
+    font-family: "Satoshi Medium", sans-serif;
+    padding-left: 20px;
+  }
+  
+  .progress-bars {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 16px;
+  }
+  
